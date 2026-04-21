@@ -35,6 +35,4 @@ portfolio-augusto/
 - **GitHub:** [@augus45](https://github.com/augus45)
 - **WhatsApp:** +54 351 531 3918
 
----
 
-⭐ Si te gustó el proyecto, ¡dale una estrella!
