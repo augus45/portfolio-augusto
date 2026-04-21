@@ -2,6 +2,8 @@
 
 Portfolio profesional de desarrollador fullstack con diseño moderno y responsivo.
 
+🔗 **Ver en vivo:** [https://augustoacuna.netlify.app/](https://augustoacuna.netlify.app/)
+
 ## 🛠️ Tecnologías
 
 - **Frontend:** HTML5, CSS3, JavaScript
