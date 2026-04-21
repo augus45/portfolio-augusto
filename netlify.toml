@@ -1,0 +1,3 @@
+# Sitio estático: publicá esta carpeta (portfolio-augusto) como raíz del sitio.
+[build]
+  publish = "."
