@@ -222,6 +222,116 @@ h3 {
   margin-bottom: 0;
 }
 
+/* Tarjetas expandibles de Trayectoria */
+.card.expandable {
+  cursor: pointer;
+  position: relative;
+  transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.card.expandable:hover {
+  border-color: var(--accent);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.card.expandable:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.card-summary {
+  position: relative;
+  padding-right: 2rem;
+}
+
+.card-summary .institution {
+  margin-bottom: 0;
+  font-weight: 500;
+}
+
+.expand-icon {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  font-size: 1.6rem;
+  font-weight: 400;
+  color: var(--accent);
+  transition: transform 0.3s cubic-bezier(0.22, 0.61, 0.36, 1);
+  line-height: 1;
+  user-select: none;
+}
+
+.card.expandable.expanded .expand-icon {
+  transform: translateY(-50%) rotate(45deg);
+}
+
+/* Animacion de altura mediante grid-template-rows */
+.card-details {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.3s cubic-bezier(0.22, 0.61, 0.36, 1);
+  overflow: hidden;
+}
+
+.card.expandable.expanded .card-details {
+  grid-template-rows: 1fr;
+}
+
+.details-content {
+  min-height: 0;
+  opacity: 0;
+  transition: opacity 0.25s ease-out;
+}
+
+.card.expandable.expanded .details-content {
+  opacity: 1;
+  transition-delay: 0.1s;
+}
+
+.details-divider {
+  border: none;
+  border-top: 1px solid var(--line);
+  margin: 1.2rem 0 1rem;
+}
+
+.card-details h4 {
+  margin: 0 0 0.3rem 0;
+  font-size: 1.05rem;
+  color: var(--text-main);
+}
+
+.card-details .sub-meta {
+  font-size: 0.85rem;
+  color: var(--accent);
+  margin: 0 0 0.7rem 0;
+  font-weight: 600;
+}
+
+.sub-experience {
+  margin-bottom: 1.2rem;
+}
+
+.sub-experience:last-child {
+  margin-bottom: 0;
+}
+
+.card-details ul {
+  margin: 0.5rem 0 0;
+  padding-left: 1.1rem;
+}
+
+.card-details li {
+  font-size: 0.92rem;
+  margin-bottom: 0.4rem;
+  color: var(--text-muted);
+}
+
+.card-details li:last-child {
+  margin-bottom: 0;
+}
+
+
 .honeypot {
   position: absolute;
   left: -9999px;

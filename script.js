@@ -65,3 +65,25 @@ if (contactForm && formStatus) {
     }
   });
 }
+
+// Tarjetas expandibles en Trayectoria
+const expandableCards = document.querySelectorAll(".card.expandable");
+
+expandableCards.forEach((card) => {
+  const toggleCard = () => {
+    const isExpanded = card.classList.contains("expanded");
+    card.classList.toggle("expanded");
+    card.setAttribute("aria-expanded", !isExpanded);
+  };
+
+  card.addEventListener("click", toggleCard);
+
+  // Accesibilidad para teclado (Enter o Espacio)
+  card.addEventListener("keydown", (event) => {
+    if (event.key === "Enter" || event.key === " ") {
+      event.preventDefault(); // Evita scroll con espacio
+      toggleCard();
+    }
+  });
+});
+
